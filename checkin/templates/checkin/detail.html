@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>查询</title>
+</head>
+<body>
+  {% if student %}
+  <div>
+    <p>学号：{{ student.student_id }}</p>
+    <p>签到次数：{{ student.checkintimes }}<p>
+    <br>
+    <p>签到详情</p>
+    <ul>
+      {% for checkin in student.record.all %}
+        <li>{{ checkin.time }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+  <p>你还未签到过！<p>
+  {% endif %}
+  </div>
+</body>
+</html>

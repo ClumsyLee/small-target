@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>签到</title>
+</head>
+<body>
+  <div>
+    <form action="" method="post">
+      {% csrf_token %}
+      {{ form.student_id }}
+      {{ form.student_id.errors }}
+      <input type="submit" value="签到">
+    </form>
+  </div>
+  {% if checkinlist %}
+  <div>
+    <h3>今日签到</h3>
+    <ul>
+      {% for checkin in checkinlist %}
+        <li>{{ checkin.student.student_id }} {{ checkin.time }}</li>
+      {% endfor%}
+    </ul>
+  {% else %}
+  {% endif %}
+  </div>
+  <div>
+    <form action="/search/" method="get">
+      {{ form.student_id }}
+      {{ form.student_id.errors }}
+      <input type="submit" value="查询">
+    </form>
+  </div>
+</body>
+</html>
