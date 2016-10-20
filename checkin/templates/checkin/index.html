@@ -14,13 +14,9 @@
   </div>
   {% if checkinlist %}
   <div>
-    <h3>今日签到</h3>
-    <ul>
-      {% for checkin in checkinlist %}
-        <li>{{ checkin.student.student_id }} {{ checkin.time }}</li>
-      {% endfor%}
-    </ul>
+    <h3>今天已有 {{ checkinlist|length }} 人签到</h3>
   {% else %}
+    <h3>今天还没有人签到</h3>
   {% endif %}
   </div>
   <div>
