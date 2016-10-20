@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>签到情况统计</title>
+</head>
+<body>
+  {% if students %}
+  <div>
+    <ul>
+    {% for student in students %}
+      <li><a href="/{{student.student_id}}">{{ student.student_id }}</a>：{{ student.checkintimes }} 次</li>
+    {% endfor%}
+    </ul>
+  {% else %}
+    <h3>还没有人签到</h3>
+  {% endif %}
+  </div>
+</body>
+</html>

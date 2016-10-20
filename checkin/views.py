@@ -49,12 +49,15 @@ def search(request):
     return HttpResponseRedirect("/{0}/".format(student_id))
 
 def today(request):
-    try:
-        checkinlist = Checkin.objects.filter(time__startswith = datetime.date.today()).order_by('time')
-    except:
-        checkinlist = []
     return render(request, 'checkin/today.html',
                   {'checkinlist': get_today_checkinlist()})
+
+def summary(request):
+    try:
+        students = Student.objects.order_by('-checkintimes', 'student_id')
+    except:
+        students = []
+    return render(request, 'checkin/summary.html', {'students': students})
 
 def detail(request,student_id):
     try:

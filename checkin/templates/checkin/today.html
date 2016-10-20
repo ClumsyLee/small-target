@@ -9,7 +9,7 @@
     <h3>今天已有 {{ checkinlist|length }} 人签到</h3>
     <ul>
     {% for checkin in checkinlist %}
-      <li><a href="/{{checkin.student.student_id}}">{{ checkin.student.student_id }}</a> {{ checkin.time }}</li>
+      <li><a href="/{{checkin.student.student_id}}">{{ checkin.student.student_id }}</a>：{{ checkin.time }}</li>
     {% endfor%}
     </ul>
   {% else %}
