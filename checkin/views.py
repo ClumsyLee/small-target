@@ -40,15 +40,21 @@ def index(request):
                           {'student': student, 'tip': get_tip()})
     else:
         form = CheckinForm()
-    try:
-        checkinlist = Checkin.objects.filter(time__startswith = datetime.date.today()).order_by('time')
-    except:
-        checkinlist = []
-    return render(request,'checkin/index.html',{'form':form,'checkinlist':checkinlist})
+
+    return render(request, 'checkin/index.html',
+                  {'form': form, 'checkinlist': get_today_checkinlist()})
 
 def search(request):
     student_id = request.GET.get('student_id','')
     return HttpResponseRedirect("/{0}/".format(student_id))
+
+def today(request):
+    try:
+        checkinlist = Checkin.objects.filter(time__startswith = datetime.date.today()).order_by('time')
+    except:
+        checkinlist = []
+    return render(request, 'checkin/today.html',
+                  {'checkinlist': get_today_checkinlist()})
 
 def detail(request,student_id):
     try:
@@ -57,6 +63,12 @@ def detail(request,student_id):
         student = Student(student_id=student_id, checkintimes=0)
 
     return render(request,'checkin/detail.html',{'student':student})
+
+def get_today_checkinlist():
+    try:
+        return Checkin.objects.filter(time__startswith = datetime.date.today()).order_by('time')
+    except:
+        return []
 
 def get_tip():
     k_day = (datetime.date.today() - FIRST_DAY).days

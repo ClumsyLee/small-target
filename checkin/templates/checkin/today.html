@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>今日签到情况</title>
+</head>
+<body>
+  {% if checkinlist %}
+  <div>
+    <h3>今天已有 {{ checkinlist|length }} 人签到</h3>
+    <ul>
+    {% for checkin in checkinlist %}
+      <li><a href="/{{checkin.student.student_id}}">{{ checkin.student.student_id }}</a> {{ checkin.time }}</li>
+    {% endfor%}
+    </ul>
+  {% else %}
+    <h3>今天还没有人签到</h3>
+  {% endif %}
+  </div>
+</body>
+</html>
