@@ -6,6 +6,7 @@
 <body>
   {% if students %}
   <div>
+    <h3>共有 {{ students|length }} 人签到</h3>
     <ul>
     {% for student in students %}
       <li><a href="/{{student.student_id}}">{{ student.student_id }}</a>：{{ student.checkintimes }} 次</li>
