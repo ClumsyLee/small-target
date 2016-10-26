@@ -1,0 +1,118 @@
+*,*:before,*:after{
+    margin: 0;
+    padding: 0;
+}
+
+
+html{
+    font-size: 18px;
+    font-family: 'Microsoft Yahei',simhei,sans-serif;
+    color: rgb(254,100,96);
+}
+@media all and ( max-width: 1000px){
+    html{
+        font-size: 15px;
+    }
+}
+@media all and ( max-width: 600px){
+    html{
+        font-size: 12px;
+    }
+}
+
+
+body{
+    position: relative;
+    overflow-x: hidden;
+    background: rgb(247,243,211);
+}
+
+
+div.theme-pic{
+    margin: 100px auto 0;
+    max-width: 350px;
+    height: 500px;
+    background: url("../image/129_03.png");
+    background-repeat: no-repeat;
+}
+
+div.main-heading{
+    display: block;
+    margin: auto;
+}
+
+div.main-heading input{
+    display: block;
+    color: rgb(254,100,96);
+    margin: auto;
+    background: transparent;
+    outline: none;
+    text-align: center;
+    line-height: 1.333333;
+    padding: .2rem;
+}
+
+
+#sub{
+    font-size: 1.6rem;
+    border: none;
+    cursor: pointer;
+    width: 6rem;
+    opacity: .8;
+    margin-bottom: 10px;
+    position: relative;
+
+    -webkit-transition: opacity .3s ease-out;
+    -moz-transition: opacity .3s ease-out;
+    -ms-transition: opacity .3s ease-out;
+    -o-transition: opacity .3s ease-out;
+    transition: opacity .3s ease-out;
+}
+#sub:hover{
+    opacity: 1;
+}
+
+
+div.main-heading input[type='text']{
+    font-size: 1.5rem;
+    border: 2px solid currentColor;
+
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+div.main-heading input[type='text']:hover{
+    -webkit-box-shadow:  0 0 10px rgb(254,100,96);
+    -moz-box-shadow:  0 0 10px rgb(254,100,96);
+    -o-box-shadow: 0 0 10px rgb(254,100,96);
+    box-shadow:  0 0 10px rgb(254,100,96);
+}
+
+div.regist{
+    max-width: 70%;
+    margin: 50px auto;
+    border: none;
+    border-left: 2px solid rgb(254,100,96);
+    height: auto;
+}
+div.regist > p{
+    font-size: 1.4rem;
+    color: inherit;
+    margin-left: 1.7rem;
+    margin-bottom: 20px;
+}
+div.regist-data{
+    margin-left: 1.7rem;
+}
+div.regist-data > p{
+    font-size: 1.3rem;
+    color: inherit;
+    line-height: 1.5;
+}

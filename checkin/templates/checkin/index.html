@@ -1,23 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>签到</title>
+
+    <title>签到</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="129" />
+    <meta name="keywords" content="EE,129" />
+    <meta name="viewpoint" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="eesast" />
+    <meta name="HandheldFriendly" content="true">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="renderer" content="webkit">
+    <meta name="theme" content="EE129">
+
+
+    {% load static %}
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+
+    {% load static %}
+    <link rel="icon" href="{% static "image/EE129.ico" %}"
+
 </head>
 <body>
-  <div>
-    <form action="" method="post">
-      {% csrf_token %}
-      {{ form.student_id }}
-      {{ form.student_id.errors }}
-      <input type="submit" value="签到">
-    </form>
-  </div>
-  {% if checkinlist %}
-  <div>
-    <h3>今天已有 {{ checkinlist|length }} 人签到</h3>
-  {% else %}
-    <h3>今天还没有人签到</h3>
-  {% endif %}
-  </div>
+
+    <div class="theme-pic"></div>
+
+    <div class="main-heading">
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="submit" value="签到" id="sub">
+            {{ form.student_id }}
+            {{ form.student_id.errors }}
+
+        </form>
+
+    </div>
+
+
+    <div class="regist">
+        <p>今日签到</p>
+
+        <div class="regist-data">
+            {% if checkinlist %}
+            <p>今天已有 {{ checkinlist|length }} 人签到</p>
+            {% else %}
+            <p>今天还没有人签到</p>
+            {% endif %}
+        </div>
+
+    </div>
+
+
+
+
+
+
+
 </body>
 </html>

@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>查询</title>
+    <title>查询</title>
+
+    {% load static %}
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+
 </head>
+
 <body>
-  <div>
+
+<div>
     <p>你已经签到了 {{ student.checkintimes }} 天</p>
-  </div>
-  <div>
+</div>
+<div>
     <p>{{ tip }}</p>
-  </div>
+</div>
+
 </body>
 </html>
