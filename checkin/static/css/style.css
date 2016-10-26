@@ -96,7 +96,7 @@ div.main-heading input[type='text']:hover{
 }
 
 div.regist{
-    max-width: 70%;
+    max-width: 500px;
     margin: 50px auto;
     border: none;
     border-left: 2px solid rgb(254,100,96);
