@@ -116,3 +116,51 @@ div.regist-data > p{
     color: inherit;
     line-height: 1.5;
 }
+
+
+@media all and ( min-width: 1200px) {
+    .reg{
+        max-width: 1060px;
+        margin: auto;
+    }
+}
+@media all and ( min-width: 900px ) and (max-width: 1199px){
+    .reg{
+        width: 90%;
+        margin: auto;
+    }
+}
+@media all and ( max-width: 900px){
+    .reg{
+        width: 85%;
+        margin: auto;
+    }
+}
+
+.reg{
+    position: relative;
+    display: block;
+    height: 500px;
+    background-image: url('../image/129_03.png');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
+
+.text-box{
+    text-align: left;
+    max-width: 900px;
+    margin: 100px auto 0;
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+@media all and ( max-width: 900px) {
+    .text-box{
+        width: 90%;
+        margin-top: 30px;
+    }
+}
+
+.text-box > p.heading{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}

@@ -1,21 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <title>查询</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="129" />
+    <meta name="keywords" content="EE,129" />
+    <meta name="viewpoint" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="eesast" />
+    <meta name="HandheldFriendly" content="true">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="renderer" content="webkit">
+    <meta name="theme" content="EE129">
+
 
     {% load static %}
     <link href="{% static "css/style.css" %}" rel="stylesheet">
+
+    {% load static %}
+    <link rel="icon" href="{% static "image/EE129.ico" %}"
 
 </head>
 
 <body>
 
-<div>
-    <p>你已经签到了 {{ student.checkintimes }} 天</p>
-</div>
-<div>
-    <p>{{ tip }}</p>
-</div>
+    <div class="text-box">
+        <p class="heading">你已经签到了 {{ student.checkintimes }} 天</p>
+        <p>{{ tip }}</p>
+    </div>
+
+    <div class="reg"></div>
 
 </body>
+
 </html>
