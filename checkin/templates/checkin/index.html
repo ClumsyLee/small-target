@@ -38,7 +38,7 @@
             <p class="tip">请输入您的学号</p>
             {% endif %}
             {{ form.student_id }}
-            <input type="submit" value="签到" id="sub">
+            <input type="submit" value="打卡" id="sub">
             
 
 
@@ -52,9 +52,9 @@
 
         <div class="regist-data">
             {% if checkinlist %}
-            <p>今天已有 {{ checkinlist|length }} 人签到</p>
+            <p>今天已有 {{ checkinlist|length }} 人打卡</p>
             {% else %}
-            <p>今天还没有人签到</p>
+            <p>今天还没有人打卡</p>
             {% endif %}
         </div>
 
