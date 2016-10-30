@@ -30,14 +30,14 @@
 
         <form action="" method="post">
             {% csrf_token %}
-            <input type="submit" value="签到" id="sub">
-            {{ form.student_id }}
-
             {% if form.student_id.errors %}
             <p class="tip error">请输入正确学号</p>
             {% else %}
             <p class="tip">请输入您的学号</p>
             {% endif %}
+            {{ form.student_id }}
+            <input type="submit" value="签到" id="sub">
+            
 
 
         </form>
@@ -57,8 +57,11 @@
         </div>
 
     </div>
-
-
+    
+    <div class="join">
+        <a href="http://mp.weixin.qq.com/s?__biz=MzA3MDA1MTAyMw==&mid=2650760833&idx=1&sn=2178ec9c8ea45257a6674d86f2659493&chksm=" target="_blank" title="加入活动">加入活动</a>
+    </div>
+        
     <footer>
         <p title="联合活动">电子系团委·环境学院团委·自动化系团委联合主题活动</p>
         <br>
