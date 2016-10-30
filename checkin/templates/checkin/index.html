@@ -30,7 +30,7 @@
 
         <form action="" method="post">
             {% csrf_token %}
-            <p><center>请输入您的学号</center></p>
+            <p style="FONT-SIZE: 1.3rem" align=center>请输入您的学号</p>
             {{ form.student_id }}
             <center>{{ form.student_id.errors }}</center>
             <input type="submit" value="签到" id="sub">
