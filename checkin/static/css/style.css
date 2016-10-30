@@ -81,7 +81,6 @@ footer a{
     display: block;
     margin: auto;
     text-decoration: none;
-    color: inherit;
     padding-top: .3rem;
     font-size: 1rem;
     margin-bottom: 1rem;
@@ -185,14 +184,13 @@ div.join{
     max-width: 500px;
     margin: 50px auto;
     border: none;
-    border-left: 2px solid rgb(254,100,96);
     height: auto;
 }
 div.join > a{
+    text-align: center;
+    text-decoration: none;
     font-size: 1rem;
     color: inherit;
-    margin-left: 1.7rem;
-    margin-bottom: 20px;
 }
 @media all and ( min-width: 1200px) {
     .reg{
