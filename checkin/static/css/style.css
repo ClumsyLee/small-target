@@ -54,10 +54,12 @@ div.main-heading input{
 
 @keyframes two-dimension-code {
     15%{transform: translateX(13px);}
-    45%{transform: translateX(-21px);}
-    70%{transform: translateX(10px);}
-    85%{transform: translateX(-5px);}
-    100%{transform: translateX(3px);}
+    35%{transform: translateX(-21px);}
+    50%{transform: translateX(13px);}
+    75%{transform: translateX(-8px);}
+    85%{transform: translateX(5px);}
+    95%{transform: translateX(-3px)}
+    100%{transform: translateX(1px)}
 }
 @media all and ( min-width: 1200px){
     .two-d-code img:hover{
@@ -71,18 +73,22 @@ div.main-heading input{
     display: block;
     margin: auto;
 }
-.two-d-code figcaption{
+.two-d-code a{
     -webkit-transition: color .3s ease-out;
     -moz-transition: color .3s ease-out;
     -ms-transition: color .3s ease-out;
     -o-transition: color .3s ease-out;
     transition: color .3s ease-out;
 
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    margin: auto;
     margin-bottom: .3rem;
     text-align: center;
     font-size: 1.3rem;
 }
-.two-d-code figcaption:hover{
+.two-d-code a:hover{
     color: mediumorchid;
 }
 
@@ -95,6 +101,9 @@ p.error{
     color: crimson;
 }
 
+footer{
+    color: rgba(0, 0, 0, 0.76);
+}
 footer p{
     margin-top: 30px;
     text-align: center;
@@ -114,10 +123,11 @@ footer a{
     display: block;
     margin: auto;
     text-decoration: none;
-    color: inherit;
     margin-top: .3rem;
+    padding-top: .3rem;
     font-size: 1rem;
     margin-bottom: 1rem;
+    color: inherit;
 
     -webkit-transition: all ease-out .3s;
     -moz-transition: all ease-out .3s;
@@ -152,6 +162,7 @@ footer a:hover{
 div.main-heading input[type='text']{
     font-size: 1.5rem;
     border: 2px solid currentColor;
+    margin-top: .3rem;
 
     -webkit-transition: all .3s ease-out;
     -moz-transition: all .3s ease-out;
@@ -194,6 +205,24 @@ div.regist-data > p{
 }
 
 
+@media all and ( min-width: 1200px) {
+    .reg{
+        max-width: 1060px;
+        margin: auto;
+    }
+}
+@media all and ( min-width: 900px ) and (max-width: 1199px){
+    .reg{
+        width: 90%;
+        margin: auto;
+    }
+}
+@media all and ( max-width: 900px){
+    .reg{
+        width: 85%;
+        margin: auto;
+    }
+}
 @media all and ( min-width: 1200px) {
     .reg{
         max-width: 1060px;

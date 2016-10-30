@@ -32,14 +32,14 @@
 
         <form action="" method="post">
             {% csrf_token %}
-            <input type="submit" value="签到" id="sub">
-            {{ form.student_id }}
-
             {% if form.student_id.errors %}
             <p class="tip error">请输入正确学号</p>
             {% else %}
             <p class="tip">请输入您的学号</p>
             {% endif %}
+            {{ form.student_id }}
+            <input type="submit" value="签到" id="sub">
+            
 
 
         </form>
@@ -61,10 +61,11 @@
     </div>
 
     <figure class="two-d-code">
-        <figcaption>加入活动</figcaption>
+        <a href="http://mp.weixin.qq.com/s?__biz=MzA3MDA1MTAyMw==&mid=2650760833&idx=1&sn=2178ec9c8ea45257a6674d86f2659493&chksm=" target="_blank" title="加入活动">加入活动</a>
         {% load static %}
         <img src="{% static "image/two-dimension-code.jpg" %}">
     </figure>
+
 
     <footer>
 
