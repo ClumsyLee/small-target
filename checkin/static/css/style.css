@@ -188,7 +188,7 @@ div.join{
     border-left: 2px solid rgb(254,100,96);
     height: auto;
 }
-div.regist > p{
+div.join > a{
     font-size: 1rem;
     color: inherit;
     margin-left: 1.7rem;
