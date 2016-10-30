@@ -52,6 +52,40 @@ div.main-heading input{
     padding: .2rem;
 }
 
+@keyframes two-dimension-code {
+    15%{transform: translateX(13px);}
+    45%{transform: translateX(-21px);}
+    70%{transform: translateX(10px);}
+    85%{transform: translateX(-5px);}
+    100%{transform: translateX(3px);}
+}
+@media all and ( min-width: 1200px){
+    .two-d-code img:hover{
+        -webkit-animation: two-dimension-code .7s cubic-bezier(.52,.18,.12,.85);
+        -moz-animation: two-dimension-code .7s cubic-bezier(.52,.18,.12,.85);
+        -o-animation: two-dimension-code .7s cubic-bezier(.52,.18,.12,.85);
+        animation: two-dimension-code .7s cubic-bezier(.52,.18,.12,.85);
+    }
+}
+.two-d-code img{
+    display: block;
+    margin: auto;
+}
+.two-d-code figcaption{
+    -webkit-transition: color .3s ease-out;
+    -moz-transition: color .3s ease-out;
+    -ms-transition: color .3s ease-out;
+    -o-transition: color .3s ease-out;
+    transition: color .3s ease-out;
+
+    margin-bottom: .3rem;
+    text-align: center;
+    font-size: 1.3rem;
+}
+.two-d-code figcaption:hover{
+    color: mediumorchid;
+}
+
 p.tip{
     font-family: 'Microsoft Yahei', simhei, sans-serif;
     font-size: 1.3rem;
@@ -81,7 +115,7 @@ footer a{
     margin: auto;
     text-decoration: none;
     color: inherit;
-    padding-top: .3rem;
+    margin-top: .3rem;
     font-size: 1rem;
     margin-bottom: 1rem;
 
