@@ -19,7 +19,7 @@
     <link href="{% static "css/style.css" %}" rel="stylesheet">
 
     {% load static %}
-    <link rel="icon" href="{% static "image/EE129.ico" %}"
+    <link rel="icon" href="{% static "image/EE129.ico" %}">
 
 </head>
 <body>
@@ -32,7 +32,7 @@
             {% csrf_token %}
             <input type="submit" value="签到" id="sub">
             {{ form.student_id }}
-            {{ form.student_id.errors }}
+            <div id="error">{{ form.student_id.errors }}</div>
 
         </form>
 
@@ -53,6 +53,11 @@
     </div>
 
 
+    <footer>
+        <p title="联合活动">电子系团委·环境学院团委·自动化系团委联合主题活动</p>
+        <br>
+        <a href="https://www.eesast.com/" target="_blank" title="电子科协">电子系科协提供技术支持</a>
+    </footer>
 
 
 

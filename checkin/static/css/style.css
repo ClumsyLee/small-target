@@ -52,6 +52,46 @@ div.main-heading input{
     padding: .2rem;
 }
 
+#error{
+    font-family: 'Microsoft Yahei', simhei, sans-serif;
+    text-align: center;
+    font-size: 1.3rem;
+    color: crimson;
+}
+
+footer p{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.3rem;
+
+    -webkit-transition: all ease-out .3s;
+    -moz-transition: all ease-out .3s;
+    -ms-transition: all ease-out .3s;
+    -o-transition: all ease-out .3s;
+    transition: all ease-out .3s;
+}
+footer p:hover{
+    color: chocolate;
+}
+footer a{
+    text-align: center;
+    display: block;
+    margin: auto;
+    text-decoration: none;
+    color: inherit;
+    padding-top: .3rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+
+    -webkit-transition: all ease-out .3s;
+    -moz-transition: all ease-out .3s;
+    -ms-transition: all ease-out .3s;
+    -o-transition: all ease-out .3s;
+    transition: all ease-out .3s;
+}
+footer a:hover{
+    color: darkslateblue;
+}
 
 #sub{
     font-size: 1.6rem;
