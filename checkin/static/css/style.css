@@ -52,10 +52,13 @@ div.main-heading input{
     padding: .2rem;
 }
 
-#error{
+
+p.tip{
     font-family: 'Microsoft Yahei', simhei, sans-serif;
-    text-align: center;
     font-size: 1.3rem;
+    text-align: center;
+}
+p.error{
     color: crimson;
 }
 

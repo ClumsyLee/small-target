@@ -2,7 +2,7 @@
 <html>
 <head>
 
-    <title>签到</title>
+    <title>我正在“一二九养成计划”中打卡，一起来吧</title>
 
     <meta charset="UTF-8">
     <meta name="description" content="129" />
@@ -32,7 +32,13 @@
             {% csrf_token %}
             <input type="submit" value="签到" id="sub">
             {{ form.student_id }}
-            <div id="error">{{ form.student_id.errors }}</div>
+
+            {% if form.student_id.errors %}
+            <p class="tip error">请输入正确学号</p>
+            {% else %}
+            <p class="tip">请输入您的学号</p>
+            {% endif %}
+
 
         </form>
 
