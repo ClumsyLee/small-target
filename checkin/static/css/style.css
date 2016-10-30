@@ -181,6 +181,38 @@ div.regist-data > p{
     }
 }
 
+div.join{
+    max-width: 500px;
+    margin: 50px auto;
+    border: none;
+    border-left: 2px solid rgb(254,100,96);
+    height: auto;
+}
+div.regist > p{
+    font-size: 1rem;
+    color: inherit;
+    margin-left: 1.7rem;
+    margin-bottom: 20px;
+}
+@media all and ( min-width: 1200px) {
+    .reg{
+        max-width: 1060px;
+        margin: auto;
+    }
+}
+@media all and ( min-width: 900px ) and (max-width: 1199px){
+    .reg{
+        width: 90%;
+        margin: auto;
+    }
+}
+@media all and ( max-width: 900px){
+    .reg{
+        width: 85%;
+        margin: auto;
+    }
+}
+
 .reg{
     position: relative;
     display: block;
