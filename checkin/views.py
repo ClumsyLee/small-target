@@ -37,14 +37,14 @@ def index(request):
         if form.is_valid():
             student_id = form.cleaned_data['student_id']
             try:
-                student = Student.objects.get(student_id = student_id)
+                student = Student.objects.filter(student_id = student_id)[0]
                 if student.lastcheckintime != datetime.date.today():
-                    student.checkintimes = student.checkintimes+1
-                    student.lastcheckintime = datetme.date.today()
-                    student.save()
                     checkinrecord = Checkin(student = student)
                     checkinrecord.save()
-            except:
+                    student.checkintimes = Checkin.objects.filter(student = student).count()
+                    student.lastcheckintime = datetime.date.today()
+                    student.save()
+            except Exception as e:
                 student = Student(student_id = student_id, checkintimes = 1)
                 student.save()
                 checkinrecord = Checkin(student = student)
